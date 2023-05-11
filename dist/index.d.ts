@@ -38,6 +38,7 @@ declare class Observe {
         <T = any>(event: 'response', callback: (response: AxiosResponse<T>) => void): void;
         (event: 'error', callback: (error: AxiosError) => void): void;
     };
+    updateUrl: (config: AxiosRequestConfig, url: string) => void;
 }
 export declare class AxiosPolling {
     private instance;
@@ -58,6 +59,7 @@ export declare class AxiosPolling {
             (event: "error", callback: (error: AxiosError<any, any>) => void): void;
         };
         off: () => void;
+        updateUrl: (config: AxiosRequestConfig, url: string) => void;
     };
 }
 /**
