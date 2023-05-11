@@ -11,12 +11,11 @@ exports.axiosPolling = exports.AxiosPolling = void 0;
  */
 const axios_1 = require("axios");
 const lodash_1 = require("lodash");
-const nanoid_1 = require("nanoid");
 class Observe {
     id;
     loop;
     stacks;
-    constructor(id = nanoid_1.nanoid(10), loop = true, stacks = {
+    constructor(id = Math.random().toString(36).substr(2), loop = true, stacks = {
         request: [],
         response: [],
         error: []
