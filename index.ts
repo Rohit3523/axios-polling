@@ -9,7 +9,6 @@
 import axios, { AxiosRequestConfig, AxiosResponse, AxiosError, AxiosStatic } from 'axios';
 import { AxiosInstance } from 'axios';
 import { assign, cloneDeep } from 'lodash';
-import { nanoid } from 'nanoid';
 export interface AxiosPollingConfig {
   /** 当前正常轮询的总次数，初始值：0 */
   count: number;
@@ -42,7 +41,7 @@ interface ObserveStacks {
 
 class Observe {
   constructor(
-    public id = nanoid(10),
+    public id = Math.random().toString(36).substr(2),
     public loop = true,
     public stacks: ObserveStacks = {
       request: [],
