@@ -59,7 +59,7 @@ export declare class AxiosPolling {
             (event: "error", callback: (error: AxiosError<any, any>) => void): void;
         };
         off: () => void;
-        updateUrl: (config: AxiosRequestConfig, url: string) => void;
+        updateUrl: (url: string) => void;
     };
 }
 /**
