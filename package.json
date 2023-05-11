@@ -1,6 +1,6 @@
 {
   "name": "axios-polling",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "axios polling request",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TuiMao233/axios-polling.git"
+    "url": "git+https://github.com/Rohit3523/axios-polling.git"
   },
   "keywords": [
     "axios",
