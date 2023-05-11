@@ -65,6 +65,9 @@ class Observe {
   } = (event: 'request' | 'response' | 'error', callback: any) => {
     this['stacks'][event].push(callback);
   };
+  updateUrl = (config: AxiosRequestConfig, url: string) => {
+    config.url = url;
+  }
 }
 
 export class AxiosPolling {
@@ -120,6 +123,9 @@ export class AxiosPolling {
       remove: observe.remove,
       on: observe.on,
       off: observe.off,
+      updateUrl: (url: string) => {
+        observe.updateUrl(createConfig, url);
+      }
     };
   };
 }
