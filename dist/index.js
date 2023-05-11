@@ -36,6 +36,9 @@ class Observe {
     on = (event, callback) => {
         this['stacks'][event].push(callback);
     };
+    updateUrl = (config, url) => {
+        config.url = url;
+    }
 }
 class AxiosPolling {
     instance;
@@ -95,7 +98,10 @@ class AxiosPolling {
             },
             remove: observe.remove,
             on: observe.on,
-            off: observe.off
+            off: observe.off,
+            updateUrl: (url) => {
+                observe.updateUrl(createConfig, url);
+            }
         };
     };
 }
