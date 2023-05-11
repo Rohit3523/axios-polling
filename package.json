@@ -1,6 +1,6 @@
 {
   "name": "axios-long-polling",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "axios polling request",
   "main": "dist/index.js",
   "scripts": {
