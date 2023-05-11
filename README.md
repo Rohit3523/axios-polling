@@ -7,15 +7,16 @@ axios polling request
 ### npm & ESM
 
 ~~~
-yarn add axios-polling
+npm install axios-long-polling
+yarn add axios-long-polling
 ~~~
 
 ### introduce。
 
 ~~~js
 import axios from 'axios'
-import { axiosPolling } from 'axios-polling'
-// init axios-polling
+import { axiosPolling } from 'axios-long-polling'
+// init axios-long-polling
 axiosPolling(axios, {
   retryLimit: 15
 })
